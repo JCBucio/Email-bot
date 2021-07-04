@@ -13,8 +13,6 @@ username, password = mycred()                               # Se importan el usu
 context = ssl.create_default_context()
 
 def send_email(receiver, subject, message, archive):        # Función para enviar el correo con formato
-    server = smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context)
-    server.login(username, password)
 
     email = MIMEMultipart("alternative")
     email['From'] = username
